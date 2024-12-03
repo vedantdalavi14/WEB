@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light background for a clean look */
+    color: #343a40; /* Dark text color for better readability */
+    position: relative; /* Allow absolute positioning for watermark */
+}
+
+header {
+    background-color: #007bff; /* Primary color */
+    padding: 15px 0;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+.course-summary {
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    align-items: flex-start;
+    margin: 30px auto;
+    max-width: 1200px; /* Center the content */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+}
+
+.course-image img {
+    width: 100%; /* Full width for course image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.teacher-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.teacher-image {
+    width: 150px; /* Larger teacher image */
+    height: 150px; /* Larger teacher image */
+    border-radius: 50%; /* Circular shape */
+    margin-right: 20px; /* Space between image and text */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.course-details {
+    padding: 20px;
+    flex: 1; /* Allows details to take remaining space */
+}
+
+h1 {
+    color: #007bff; /* Course title color */
+    margin-bottom: 10px;
+}
+
+.instructor-name {
+    color: #6c757d; /* Subtle color for instructor name */
+}
+
+.course-description, .course-info, .course-topics {
+    margin: 15px 0;
+}
+
+.course-info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-info li {
+    margin-bottom: 10px;
+}
+
+.course-topics {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.course-topics li {
+    margin-bottom: 5px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #28a745; /* Green color for the button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Space above the button */
+}
+
+.buy-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #343a40;
+    color: white;
+}
+
+/* Watermark Logo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('logo.png'); /* Path to your logo */
+    background-size: 20%; /* Adjust size to fit your design */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Set transparency for watermark effect */
+    z-index: 0; /* Behind all other content */
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: flex-end; /* Align logo to the right */
+    padding: 20px; /* Add padding around the logo */
+    position: relative;
+    z-index: 1; /* Ensure the logo is above the watermark */
+}
+
+.logo {
+    max-width: 100px; /* Increased size for logo */
+    opacity: 0.8; /* Slight transparency for the logo */
+}
